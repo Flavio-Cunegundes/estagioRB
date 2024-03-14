@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>exercicio 2</title>
 </head>
+
 <body>
+  <form>
+    <input type="number" id="number">
+    <input type="submit" value="enviar" id="enviar">
+  </form>
+  <script>
 
-  <div class="curso 1">php</div>
-  <div class="curso 1">c++</div>
-  <div class="curso 2">java</div>
-  <div class="curso 2">mysql</div>
+    const btn = document.querySelector("#enviar")
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const name = document.querySelector("#number");
+      var value = number.value;
+      var position = value;
+      var penultimo = 0, ultimo = 1;
+      var numero;
 
-  <script src="soma.js"></script>
+      if (position <= 2)
+        numero = position - 1;
+      else {
+        count = 3;
+        while (count <= position) {
+          numero = ultimo + penultimo;
+          penultimo = ultimo;
+          ultimo = numero;
+          count++;
+        }
+      }
+
+      console.log(numero)
+    })
+
+
+
+  </script>
+
+
 </body>
+
 </html>
